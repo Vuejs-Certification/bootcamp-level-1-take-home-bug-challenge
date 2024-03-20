@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, inject, computed } from "vue";
+import { ref, onMounted, inject, onUnmounted, computed } from "vue";
 
 import { words } from "@/datasource";
 
@@ -58,15 +58,22 @@ function handleWordComplete() {
   }, 300);
 }
 
+let interval;
+
 onMounted(() => {
   document.addEventListener("keydown", prcoessSpellingWord);
 
-  setInterval(() => {
+  interval = setInterval(() => {
     playTime.value -= 1;
     if (playTime.value === 0) {
       end();
     }
   }, 1000);
+});
+
+onUnmounted(() => {
+  clearInterval(interval);
+  document.removeEventListener("keydown", prcoessSpellingWord);
 });
 </script>
 
