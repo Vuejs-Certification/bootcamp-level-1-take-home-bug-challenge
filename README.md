@@ -22,7 +22,7 @@ Your task is to figure out why the issues exist and fix them!
 
 > 💡 HINT: Both bugs exist in `PlayGame.vue`
 
-![Screenshot of the solution](./screenshot.gif)
+![Screenshot of the solution](https://images.certificates.dev/spelling-game-screenshot.gif)
 
 ## Other Considerations
 
