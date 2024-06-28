@@ -1,7 +1,7 @@
 ---
 difficulty: 1
 tags: codechallenge, Bug Fixing Challenge, vue 3
-openFiles: src/App.vue
+openFiles: src/components/PlayGame.vue,src/App.vue
 ---
 
 # Spelling Game Code Challenge
