@@ -31,7 +31,7 @@ function checkSpellTextColor(index) {
   }
 }
 
-function prcoessSpellingWord(event) {
+function processSpellingWord(event) {
   console.log("processing spelling word");
   const key = event.key;
   if (key === "Delete" || key === "Del" || key === "Backspace") {
@@ -61,7 +61,7 @@ function handleWordComplete() {
 let interval;
 
 onMounted(() => {
-  document.addEventListener("keydown", prcoessSpellingWord);
+  document.addEventListener("keydown", processSpellingWord);
 
   interval = setInterval(() => {
     playTime.value -= 1;
@@ -73,7 +73,7 @@ onMounted(() => {
 
 onUnmounted(() => {
   clearInterval(interval);
-  document.removeEventListener("keydown", prcoessSpellingWord);
+  document.removeEventListener("keydown", processSpellingWord);
 });
 </script>
 
